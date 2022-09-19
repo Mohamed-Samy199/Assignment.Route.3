@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    list-style: none;
+    transition: all .8s linear;
+}
+
+:root {
+    --blue: #0078ff;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 20;
+}
+
+nav .collapse ul li a {
+    color: #fff;
+    margin-left: 10px;
+    font-size: 17px;
+    position: relative;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+nav .collapse ul li a:hover {
+    color: #fff;
+    margin-left: 10px;
+    font-size: 17px;
+
+}
+
+nav .collapse ul li a:hover::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 90%;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    transition: all .5s linear;
+}
+
+.header {
+    background: url(../images/hero-bg.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+header .title {
+    text-align: center;
+    color: #fff;
+    transform: translateY(18rem);
+}
+
+header .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+header .title h3::after {
+    content: '';
+    animation: loop 3s infinite alternate linear;
+}
+
+@keyframes loop {
+    0% {
+        content: ' |';
+    }
+
+    25% {
+        content: ' |d';
+    }
+
+    40% {
+        content: ' |de';
+    }
+
+    50% {
+        content: ' |dev';
+    }
+
+    60% {
+        content: ' |deve';
+    }
+
+    70% {
+        content: ' |devel';
+    }
+
+    80% {
+        content: ' |develo';
+    }
+
+    90% {
+        content: ' |develop';
+    }
+
+    95% {
+        content: ' |develope';
+    }
+
+    100% {
+        content: ' |developer.';
+    }
+}
+
+.about .top .detalis h4 {
+    font-size: 16px !important;
+}
+
+.about .progress {
+    --bs-progress-bg: #c1d5ed;
+    --bs-progress-border-radius: 0rem;
+    --bs-progress-height: .75rem;
+}
+
+.about .about-details h3,
+.contact h3 {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.about .about-details h3::after,
+.contact h3::after {
+    content: '';
+    position: absolute;
+    width: 15%;
+    background-color: var(--blue);
+    height: 4px;
+    bottom: 0;
+    left: 0;
+}
+
+.about .about-details p,
+.contact .about-details p {
+    font-size: 20px;
+}
+
+.head .text-head h2 {
+    font-size: 40px;
+    padding-bottom: 15px;
+    color: #1e1e1e;
+}
+
+.head .text-head p {
+    color: #555;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.head .text-head p::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    background-color: var(--blue);
+    height: 5px;
+    bottom: 0;
+    transform: translate(-14rem, -50%);
+}
+
+.service .box {
+    background-color: #fff;
+}
+
+.service .box .icon i {
+    font-size: 35px;
+    padding: 30px;
+    border: 10px solid var(--blue);
+    border-radius: 50%;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+
+.service .box:hover .icon i {
+    background-color: var(--blue);
+    border: 10px solid #c1d5ed;
+    color: #fff;
+}
+
+.banner {
+    background: url(../images/counters-bg.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+}
+
+.banner .overlay {
+    background-color: rgb(0, 120, 255, .5);
+    height: 50vh;
+}
+
+.banner .box,
+.banner .box i {
+    background-color: transparent !important;
+}
+
+.banner .box i {
+    border: 10px solid #c1d5ed !important;
+}
+
+.banner .box h3,
+.banner .box p {
+    color: #fff;
+}
+
+.work .card {
+    --bs-card-border-radius: 0rem;
+    overflow: hidden;
+}
+
+.work .left {
+    margin-right: 7rem;
+}
+
+.work .card .image {
+    overflow: hidden;
+}
+
+.work .card:hover .image img {
+    transform: scale(1.5);
+}
+
+.work .card .card-body p span {
+    color: var(--blue);
+}
+
+.work .card .card-body i {
+    padding: 10px;
+    border: 3px solid var(--blue);
+    border-radius: 50%;
+    color: var(--blue);
+    font-size: 18px;
+}
+
+.banner-two {
+    background: url(../images/overlay-bg.jpg) no-repeat center;
+    background-size: cover;
+    height: 75vh;
+}
+
+.banner-two .overlay {
+    height: 75vh;
+}
+
+.banner-two .container .row .slide {
+    height: 30rem !important;
+}
+
+.banner-two .carousel-inner .image {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+    transform: translateX(33rem);
+}
+
+.banner-two .carousel-inner .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.banner-two .carousel-inner {
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+}
+
+.banner-two .carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: #fff !important;
+}
+
+.banner-two .carousel-indicators [data-bs-target] {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.blog .card {
+    --bs-card-border-radius: 0rem;
+}
+
+.blog .card img {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    cursor: pointer;
+}
+
+.blog .card h5:hover,
+.blog .card .left-card h6 {
+    color: var(--blue) !important;
+    cursor: pointer;
+}
+
+.blog .center .btn {
+    top: -1rem;
+    left: 38%;
+    font-size: 12px;
+}
+
+.blog .bottom-card {
+    position: relative;
+    padding-top: 15px;
+}
+
+.blog .bottom-card::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color: #999;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.contact {
+    background: url(../images/overlay-bg.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+}
+
+.contact .overlay {
+    background-color: rgb(0, 120, 255, .5);
+    height: 90vh;
+}
+
+.contact .btn {
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contact .location a i {
+    color: var(--blue);
+}
+
+.contact .icons a i {
+    padding: 10px;
+    border: 4px solid var(--blue);
+    border-radius: 50%;
+    background-color: #fff;
+    font-size: 17px;
+}
+
+.contact .icons a:hover i {
+    border: 4px solid #a5bcd7;
+    background-color: var(--blue);
+    color: #fff;
+}
+
+footer {
+    background-color: #0062d3;
+}
